@@ -1,0 +1,21 @@
+{% from "macros/fields.html" import render_text_field %}
+
+{% extends "layout.html" %} 
+
+{%- block head_content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}" />
+{% endblock %} 
+
+
+{% block main_content %}
+    <h1 id="q_title">Question number {{page+1}} of 3</h1><br>
+    <form action="{{ url_for('pages.easy_quiz_test',page=page) }}" class="form" method="POST" name="question_form">
+        <p class="form__input" id="test">
+            <label class="form__label">{{ question_list_easy[page].question }}</label><br>
+            <input type="radio" name="test1" value={{  question_list_easy[page].option2 }}> {{ question_list_easy[page].option1 }} <br>
+            <input type="radio" name="test2" value={{  question_list_easy[page].option2 }} > {{ question_list_easy[page].option2 }} <br>
+        </p> 
+        <button type="submit" class="form__submit" id="button">Submit</button>
+    </form>
+{% endblock %}

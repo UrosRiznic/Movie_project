@@ -1,0 +1,144 @@
+.choice-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 15%;
+    font-size: 1.8rem;
+    border: 0.1rem solid #f56565;
+    background-color: white;
+    color: black;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.2rem 0.2rem 0 #f56565;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-text{
+    padding: 0.2rem;
+}
+
+  /* Styles specific to the form buttons */
+#button {
+    margin: 2rem 1rem 1rem 1rem;
+    padding: 0.75rem 3rem;
+    background: var(--background-color);
+    cursor: pointer;
+  }
+  
+#button:hover {
+    background: var(--background-color-hover);
+    box-shadow: 0 0.2rem 0.2rem 0 #f56565;
+    
+  }
+
+
+.button_holder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#inner1{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 50%;
+  padding: 20px;
+}
+#inner2{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 50%;
+  padding: 20px
+}
+#inner3{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 50%;
+  padding: 20px
+}
+
+.btn{
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f56565;
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+}
+
+.btn:hover, .btn:focus, .btn:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+button{
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border:none;
+  padding:23px 30px;
+  cursor:pointer;
+  background-color: var(--background-color);
+  color: var(--text-dark);
+  
+}
+
+button:hover{
+  background-color:#ddd;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  padding:20px 40px;
+}
+
+.dropdown-options a:hover {
+  color: #0a0a23;
+  background-color: #ddd;
+  border-radius:5px;
+}
+
+
+#q_title {
+  text-align: center;
+}
+
+#button{
+  border: var(--border);
+}

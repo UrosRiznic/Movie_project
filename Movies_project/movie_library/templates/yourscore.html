@@ -1,0 +1,30 @@
+{% from "macros/fields.html" import render_text_field %}
+
+{% extends "layout.html" %} 
+
+{%- block head_content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gifovi.css') }}" />
+{% endblock %} 
+
+{% block main_content %}
+   
+        <img class="gif_holder" src="static/bean.gif" alt="Animated Gif"/>
+        
+        <div class="text_info">
+            <a id="text_info1" href="{{ url_for('pages.easy') }}">Play another quiz!</a><br>
+            <a id="text_info2" href="{{ url_for('pages.quiz') }}">Go to your scores!</a>
+        </div>
+        <br>
+        <br>
+
+        <div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {%- for category, message in messages %}
+                    <span class="form__flash form__flash--{{category}}"> {{ message }}</span>
+                {% endfor %}
+            {% endwith %}
+        </div>
+
+{% endblock %}
+

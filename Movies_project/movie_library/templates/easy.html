@@ -1,0 +1,29 @@
+{% from "macros/fields.html" import render_text_field %}
+
+{% extends "layout.html" %} 
+
+{%- block head_content %}
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}" />
+{% endblock %} 
+
+
+{% block main_content %}
+<div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {%- for category, message in messages %}
+            <span class="form__flash form__flash--{{category}}"> {{ message }}</span>
+        {% endfor %}
+    {% endwith %}
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="button_holder">
+    <div id="inner1"><a href="{{ url_for('pages.easy_quiz_test', page=0) }}" class="btn">Start easy quiz</a></div>
+    <div id="inner2"><a href="{{ url_for('pages.medium_quiz', page=0) }}" class="btn">Start medium quiz</a></div>
+    <div id="inner3"><a href="{{ url_for('pages.hard_quiz', page=0) }}" class="btn">Start hard quiz</a></div>
+</div>
+       
+{% endblock %}
